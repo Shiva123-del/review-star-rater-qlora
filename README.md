@@ -4,6 +4,8 @@ Given a Yelp review, predict the star rating (1–5) the reviewer gave.
 
 I fine-tuned **Qwen2.5-0.5B** and **Qwen2.5-1.5B** with **QLoRA** (4-bit quantization + LoRA adapters) on a free Kaggle T4 GPU. I ran 7 training runs, changing one thing at a time, to find out what actually improves the model.
 
+📄 **[Read the full experiment report (PDF)](Review_Star_Rater_Experiment_Report.pdf)**
+
 **Result:** accuracy went from **42.7% → 65.0%**, and predictions within 1 star from **78% → 98.3%**.
 
 ---
@@ -65,6 +67,7 @@ The confusion matrix shows almost all mistakes are only 1 star off. The hardest 
 | File | What it is |
 |---|---|
 | `review_star_rater_kaggle_experiments.ipynb` | Main notebook: resume check, confusion matrix, Experiments A–F, losses and final comparison (with outputs) |
+| `Review_Star_Rater_Experiment_Report.pdf` | Full experiment report: method, results, charts, error analysis, limitations |
 | `review_star_rater.ipynb` | Clean version of the Run 1 pipeline: baseline, training, saving to Drive + Hugging Face, reloading the adapter |
 
 ## Models on Hugging Face
